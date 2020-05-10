@@ -1,8 +1,8 @@
 /*
 package com.sun.config;
 
-import com.sun.enums.Events;
-import com.sun.enums.States;
+import com.sun.events.Events;
+import com.sun.states.States;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.statemachine.config.EnableStateMachine;
@@ -42,10 +42,10 @@ public class StateMachineConfig
                 .initial(States.S1)
                 .state(States.S1)
                 .and()
-                .withStates()
-                    .parent(States.S1)
-                    .initial(States.S2)
-                    .state(States.S2);
+           .withStates()
+                .parent(States.S1)
+                .initial(States.S2)
+                .state(States.S2);
 
 
     }
@@ -70,4 +70,5 @@ public class StateMachineConfig
             }
         };
     }
-}*/
+}
+*/

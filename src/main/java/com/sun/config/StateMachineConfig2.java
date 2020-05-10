@@ -1,7 +1,8 @@
+/*
 package com.sun.config;
 
-import com.sun.enums.Events;
-import com.sun.enums.States;
+import com.sun.events.Events;
+import com.sun.states.States;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.statemachine.config.EnableStateMachine;
@@ -22,9 +23,9 @@ public class StateMachineConfig2
     public void configure(StateMachineConfigurationConfigurer<States, Events> config)
             throws Exception {
         config
-                .withConfiguration()
+             .withConfiguration()
                 .autoStartup(true)
-                .listener(listener());
+                    .listener(listener());
     }
 
     @Override
@@ -35,17 +36,17 @@ public class StateMachineConfig2
                 .initial(States.S1)
                 .state(States.S2)
                 .and()
-                .withStates()
-                    .parent(States.S2)
-                    .initial(States.S2I)
-                    .state(States.S21)
-                    .end(States.S2F)
-                    .and()
-                .withStates()
-                    .parent(States.S2)
-                    .initial(States.S3I)
-                    .state(States.S31)
-                    .end(States.S3F);
+             .withStates()
+                .parent(States.S2)
+                .initial(States.S2I)
+                .state(States.S21)
+                .end(States.S2F)
+                .and()
+             .withStates()
+                .parent(States.S2)
+                .initial(States.S3I)
+                .state(States.S31)
+                .end(States.S3F);
     }
 
     @Override
@@ -53,10 +54,10 @@ public class StateMachineConfig2
             throws Exception {
         transitions
                 .withExternal()
-                .source(States.S1).target(States.S2).event(Events.E1)
-                .and()
+                    .source(States.S1).target(States.S2).event(Events.E1)
+                    .and()
                 .withExternal()
-                .source(States.S2I).target(States.S1).event(Events.E2);
+                    .source(States.S2I).target(States.S1).event(Events.E2);
     }
 
     @Bean
@@ -68,4 +69,4 @@ public class StateMachineConfig2
             }
         };
     }
-}
+}*/

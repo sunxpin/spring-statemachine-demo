@@ -1,0 +1,11 @@
+
+spring:
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf&serverTimezone=GMT%2B8
+      username: root
+      password: 123
+      driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    generate-ddl: true
